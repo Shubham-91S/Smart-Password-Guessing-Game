@@ -1,0 +1,2 @@
+Shubham,Fruits,easy,210,4.96,Won
+Mayur,Fruits,easy,0,100.82,Lost

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Game History</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📜 Game History</h1>
+
+    {% if history %}
+
+    <table>
+
+        <tr>
+
+            <th>Player</th>
+
+            <th>Category</th>
+
+            <th>Difficulty</th>
+
+            <th>Score</th>
+
+            <th>Time</th>
+
+            <th>Result</th>
+
+        </tr>
+
+        {% for row in history %}
+
+        <tr>
+
+            <td>{{ row[0] }}</td>
+
+            <td>{{ row[1] }}</td>
+
+            <td>{{ row[2] }}</td>
+
+            <td>{{ row[3] }}</td>
+
+            <td>{{ row[4] }}</td>
+
+            <td>{{ row[5] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+<form action="/clear_history"
+      method="POST"
+      onsubmit="return confirm('Are you sure you want to clear the history?');">
+
+    <button class="danger-btn">
+        🗑 Clear History
+    </button>
+
+</form>
+
+    {% else %}
+
+        <p>No game history found.</p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+        <button>🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

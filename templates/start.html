@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Start Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 Start New Game</h1>
+
+    <p>Fill in the details below to begin your challenge.</p>
+
+    <form action="/play" method="POST">
+
+        <input
+            type="text"
+            name="player_name"
+            placeholder="👤 Enter your name"
+            required
+        >
+
+        <select name="category">
+
+            <option value="1">🍎 Fruits</option>
+            <option value="2">🐶 Animals</option>
+            <option value="3">🌍 Countries</option>
+            <option value="4">💻 Technology</option>
+            <option value="5">🎬 Movies</option>
+
+        </select>
+
+        <h3>Select Difficulty</h3>
+
+        <div class="radio-group">
+
+            <label>
+                <input type="radio"
+                       name="difficulty"
+                       value="easy"
+                       checked>
+                🟢 Easy
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="difficulty"
+                       value="medium">
+                🟡 Medium
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="difficulty"
+                       value="hard">
+                🔴 Hard
+            </label>
+
+        </div>
+
+        <br>
+
+        <button type="submit">
+            🚀 Start Game
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button>
+            🏠 Back to Home
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

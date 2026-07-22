@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart Password Guessing Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎮 Smart Password Guessing Game</h1>
+
+    <h2>📂 Category: {{ game.category }}</h2>
+
+    <h2>🎯 Difficulty: {{ game.difficulty.title() }}</h2>
+
+    <h2>🔤 Word Length: {{ game.word|length }}</h2>
+
+    <h2>❤️ Attempts Left: {{ game.attempts }}</h2>
+
+    <div class="hint">
+
+        💡 Current Hint
+
+        <br><br>
+
+        <h2>{{ game.hint }}</h2>
+
+    </div>
+
+    <form action="/guess" method="POST">
+
+        <input
+            type="text"
+            name="guess"
+            placeholder="🔍 Enter your guess"
+            required
+        >
+
+        <button type="submit">
+
+            🚀 Submit Guess
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <h2>📋 Previous Guesses</h2>
+
+    {% if game.guesses %}
+
+    <ul class="guess-list">
+
+        {% for guess in game.guesses %}
+
+        <li>{{ guess }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+    {% else %}
+
+    <p>No guesses yet.</p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+        <button>
+            🏠 Home
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>
+

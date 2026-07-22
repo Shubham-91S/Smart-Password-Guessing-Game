@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏆 Leaderboard</h1>
+
+    {% if leaderboard %}
+
+    <table>
+
+        <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Score</th>
+        </tr>
+
+        {% for player, score in leaderboard %}
+
+        <tr>
+
+            <td>
+                {% if loop.index == 1 %}
+                    🥇
+                {% elif loop.index == 2 %}
+                    🥈
+                {% elif loop.index == 3 %}
+                    🥉
+                {% else %}
+                    {{ loop.index }}
+                {% endif %}
+            </td>
+
+            <td>{{ player }}</td>
+
+            <td>{{ score }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <form action="/clear_leaderboard"
+          method="POST"
+          onsubmit="return confirm('Are you sure you want to clear the leaderboard?');">
+
+        <button class="danger-btn">
+            🗑 Clear Leaderboard
+        </button>
+
+    </form>
+
+    {% else %}
+
+        <p>No scores available.</p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+        <button>🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

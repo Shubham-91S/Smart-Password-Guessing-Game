@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Game Over</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="game-over">😢 Game Over</h1>
+
+    <p>Better luck next time!</p>
+
+    <div class="hint">
+
+        <h3>🔑 The Correct Password Was</h3>
+
+        <h2>{{ word }}</h2>
+
+    </div>
+
+    <h2>⏱ Time Taken: {{ time_taken }} seconds</h2>
+
+    <br>
+
+    <a href="/start">
+        <button>🎮 Play Again</button>
+    </a>
+
+    <a href="/leaderboard">
+        <button>🏆 Leaderboard</button>
+    </a>
+
+    <a href="/history">
+        <button>📜 History</button>
+    </a>
+
+    <a href="/">
+        <button class="home-btn">🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

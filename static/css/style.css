@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.container{
+    background:#fff;
+    width:90%;
+    max-width:900px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+h1{
+    color:#1e293b;
+    margin-bottom:20px;
+    font-size:38px;
+}
+
+h2{
+    color:#334155;
+    margin:15px 0;
+}
+
+h3{
+    color:#475569;
+    margin:15px 0;
+}
+
+p{
+    color:#64748b;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* Buttons */
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    margin:10px;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 10px 20px rgba(37,99,235,.3);
+}
+
+/* Inputs */
+
+input[type=text],
+select{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0 20px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:16px;
+}
+
+/* Radio Buttons */
+
+input[type=radio]{
+    margin-right:8px;
+}
+
+label{
+    font-size:17px;
+    margin-right:20px;
+}
+
+/* Tables */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:14px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background:#f8fafc;
+}
+
+tr:hover{
+    background:#dbeafe;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+}
+
+/* Hint Box */
+
+.hint{
+    background:#eff6ff;
+    padding:12px;
+    border-radius:8px;
+    margin:20px 0;
+    color:#1d4ed8;
+    font-weight:600;
+}
+
+/* Guess History */
+
+.guess-list{
+    margin-top:20px;
+}
+
+.guess-list li{
+    list-style:none;
+    background:#f1f5f9;
+    margin:8px auto;
+    width:200px;
+    padding:10px;
+    border-radius:8px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+
+    width:100%;
+    padding:20px;
+}
+
+table{
+
+    font-size:14px;
+}
+
+button{
+
+    width:100%;
+}
+
+h1{
+
+    font-size:30px;
+}
+
+}
+
+.radio-group{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:25px 0;
+    flex-wrap:wrap;
+}
+
+.radio-group label{
+    background:#f1f5f9;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:500;
+}
+
+.radio-group label:hover{
+    background:#dbeafe;
+}
+
+.radio-group input{
+    margin-right:8px;
+}
+
+/* Hint Title */
+
+.hint h2{
+    color:#2563eb;
+    letter-spacing:3px;
+}
+
+/* Guess Input */
+
+input[name="guess"]{
+    margin-top:20px;
+}
+
+/* Previous Guesses */
+
+.guess-list{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    padding:0;
+}
+
+.guess-list li{
+    width:auto;
+    padding:12px 18px;
+    background:#2563eb;
+    color:white;
+    font-weight:600;
+    border-radius:25px;
+}
+
+/* Win Page */
+
+.success-message{
+    color:#16a34a;
+    font-size:22px;
+    font-weight:600;
+}
+
+.score-card{
+    background:#ecfdf5;
+    border:2px solid #22c55e;
+    border-radius:12px;
+    padding:18px;
+    margin:20px 0;
+}
+
+.score-card h2{
+    margin:10px 0;
+}
+
+/* Home Button */
+
+.home-btn{
+    background:#64748b;
+}
+
+.home-btn:hover{
+    background:#475569;
+}
+
+/* Game Over */
+
+.game-over{
+    color:#dc2626;
+    font-weight:700;
+}
+
+/* Table Styling */
+
+table{
+
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th{
+
+    font-size:18px;
+}
+
+td{
+
+    font-size:16px;
+}
+
+tr:hover{
+
+    transform:scale(1.01);
+    transition:.2s;
+}
+
+/* Medal Effect */
+
+td:first-child{
+
+    font-size:22px;
+}
+
+/* Danger Button */
+
+.danger-btn{
+
+    background:#dc2626;
+}
+
+.danger-btn:hover{
+
+    background:#b91c1c;
+}
