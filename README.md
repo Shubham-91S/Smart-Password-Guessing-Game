@@ -89,3 +89,33 @@ The project helped me strengthen my understanding of:
     ├── leaderboard.png
     ├── history.png
     └── gameover.png
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+### 🎮 Gameplay
+
+![Gameplay](screenshots/play.png)
+
+---
+
+### 🏆 Leaderboard
+
+![Leaderboard](screenshots/leaderboard.png)
+
+---
+
+### 📜 History
+
+![History](screenshots/history.png)
+
+---
+
+### ❌ Game Over
+
+![Game Over](screenshots/gameover.png)
